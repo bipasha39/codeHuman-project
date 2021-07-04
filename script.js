@@ -7,7 +7,10 @@ function getRandomWord(){
     fetch(url)
     .then(res=>res.json())
     .then(data => {
-        button.innerHTML = data.value
+        button.innerHTML = data.value;
+        setTimeout(()=>{
+            button.innerHTML = "Click here";
+        }, 3000)
     })
         
     .catch(error=>(error)) 
