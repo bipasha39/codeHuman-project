@@ -3,7 +3,7 @@ const content=document.getElementById('word-content')
 button.addEventListener('click', getRandomWord);
 
 function getRandomWord(){
-    url="http://localhost:3000/random"
+    url="https://coddyword.herokuapp.com/random"
     fetch(url)
     .then(res=>res.json())
     .then(data => {
@@ -11,8 +11,7 @@ function getRandomWord(){
         setTimeout(()=>{
             button.innerHTML = "Click here";
         }, 3000)
-    })
-        
+    })       
     .catch(error=>(error)) 
 }
 
